@@ -1,6 +1,9 @@
 import { ArrowRight, Download, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Container } from "../components/Container";
+import { QuickStatRows } from "../components/QuickStatRows";
 import { portfolio } from "../data/portfolio";
+import { routes } from "../routes";
 
 export default function Hero() {
   return (
@@ -37,12 +40,12 @@ export default function Hero() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#projects"
+              <Link
+                to={routes.projects}
                 className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-100"
               >
                 View projects <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
               <a
                 href={portfolio.resumeUrl}
                 download="Ahad-Suleman-Resume.pdf"
@@ -59,7 +62,7 @@ export default function Hero() {
                   <a
                     key={s.label}
                     href={s.href}
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/40 px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900/50 px-4 py-2 text-sm text-slate-200 transition duration-300 hover:border-white/18 hover:bg-white/[0.06] hover:text-white"
                   >
                     <Icon className="h-4 w-4 text-emerald-200" />
                     {s.label}
@@ -72,24 +75,18 @@ export default function Hero() {
           <div className="md:justify-self-end">
             <div className="relative">
               <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-emerald-500/20 to-violet-500/10 blur-2xl" />
-              <div className="relative rounded-[2rem] border border-white/10 bg-slate-900/40 p-6 shadow-2xl">
-                <div className="grid gap-4">
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-950/55 p-6 shadow-2xl shadow-black/25 transition duration-300 hover:border-white/15">
+                <div className="pointer-events-none absolute -right-12 top-0 h-32 w-32 rounded-full bg-emerald-400/10 blur-3xl" />
+                <div className="pointer-events-none absolute -bottom-10 -left-8 h-28 w-28 rounded-full bg-violet-400/10 blur-2xl" />
+                <div className="relative grid gap-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-sm font-semibold text-white">Quick highlights</div>
-                    <div className="text-xs text-slate-400">2026</div>
+                    <div className="text-sm font-semibold tracking-tight text-white">Quick highlights</div>
+                    <div className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-slate-400">
+                      2026
+                    </div>
                   </div>
-                  <div className="grid gap-3">
-                    {portfolio.quickStats.map((s) => (
-                      <div
-                        key={s.label}
-                        className="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/30 px-4 py-3"
-                      >
-                        <div className="text-sm text-slate-300">{s.label}</div>
-                        <div className="text-sm font-semibold text-white">{s.value}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-emerald-500/10 to-violet-500/10 px-4 py-3 text-sm text-slate-200">
+                  <QuickStatRows className="grid gap-2.5" variant="hero" />
+                  <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-emerald-500/12 to-violet-500/12 px-4 py-3 text-sm leading-relaxed text-slate-200">
                     Frontend developer based in {portfolio.location}, focused on clean UI and
                     smooth UX.
                   </div>

@@ -1,9 +1,21 @@
+import { Link } from "react-router-dom";
 import { portfolio } from "../data/portfolio";
+import { routes } from "../routes";
+
+const sectionLinks = [
+  { to: routes.home, label: "Home" },
+  { to: routes.about, label: "About" },
+  { to: routes.projects, label: "Projects" },
+  { to: routes.skills, label: "Skills" },
+  { to: routes.highlights, label: "Highlights" },
+  { to: routes.contact, label: "Contact" },
+] as const;
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
+    <footer className="relative border-t border-white/10 bg-slate-950">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent" />
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
         <div>
           <div className="text-sm font-semibold text-white">{portfolio.name}</div>
           <p className="mt-3 text-sm leading-relaxed text-slate-400">
@@ -17,18 +29,11 @@ export default function Footer() {
               Sections
             </div>
             <div className="mt-3 grid gap-2 text-sm">
-              <a href="#about" className="text-slate-400 hover:text-white">
-                About
-              </a>
-              <a href="#projects" className="text-slate-400 hover:text-white">
-                Projects
-              </a>
-              <a href="#skills" className="text-slate-400 hover:text-white">
-                Skills
-              </a>
-              <a href="#contact" className="text-slate-400 hover:text-white">
-                Contact
-              </a>
+              {sectionLinks.map(({ to, label }) => (
+                <Link key={to} to={to} className="text-slate-400 hover:text-white">
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
           <div>
@@ -61,4 +66,3 @@ export default function Footer() {
     </footer>
   );
 }
-
