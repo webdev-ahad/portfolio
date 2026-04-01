@@ -20,10 +20,9 @@ export default function Navbar() {
           end
           className="group inline-flex items-center gap-2 font-semibold tracking-tight text-white hover:opacity-95"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/30 to-violet-500/30 ring-1 ring-white/10">
-            <span className="h-2 w-2 rounded-full bg-emerald-300" />
+          <span className="inline-flex h-10 w-auto items-center justify-center p-0">
+            <img src={portfolio.logo} alt={portfolio.name} className="h-24 w-24" />
           </span>
-          <span className="text-sm md:text-base">{portfolio.name}</span>
         </NavLink>
 
         <div className="hidden items-center gap-1 md:flex">
