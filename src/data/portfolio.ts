@@ -36,7 +36,7 @@ export const portfolio = {
   name: "Ahad Suleman",
   role: "Frontend Developer",
   location: "Karachi, Pakistan",
-  logo: "./public/favicon.png",
+  logo: "/favicon.png",
   summary:
     "I build clean, responsive web apps with React, TypeScript, and modern UI systems. I care about performance, accessibility, and great UX.",
   email: "ahad.suleman.spts@gmail.com",
