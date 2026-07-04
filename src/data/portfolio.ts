@@ -19,6 +19,7 @@ export type SocialLink = {
 export type Project = {
   title: string;
   description: string;
+  imageUrl?: string;
   tags: string[];
   liveUrl?: string;
   codeUrl?: string;
@@ -38,7 +39,7 @@ export const portfolio = {
   location: "Karachi, Pakistan",
   logo: "/favicon.png",
   summary:
-    "I build clean, responsive web apps with React, TypeScript, and modern UI systems. I care about performance, accessibility, and great UX.",
+    "I build polished React interfaces with clean UX, responsive layouts, and production-ready frontend patterns.",
   email: "ahad.suleman.spts@gmail.com",
   resumeUrl: "/Ahad-Suleman-Resume.pdf",
   socials: [
@@ -52,44 +53,49 @@ export const portfolio = {
   ] satisfies SocialLink[],
   quickStats: [
     { label: "Projects", value: "10+" },
-    { label: "Core stack", value: "React • TS" },
-    { label: "Focus", value: "UI • UX • Perf" },
+    { label: "Core stack", value: "React + TypeScript" },
+    { label: "Focus", value: "UI + UX + Performance" },
     { label: "Availability", value: "Open to work" },
   ],
   skills: {
-    "Frontend": ["HTML", "CSS", "JavaScript", "React Js"],
-    "UI & Styling": ["Bootstrap", "Tailwind", "Daisy UI", "Canva"],
-    "Backend & Database": ["PHP", "MySql"],
-    "Data": ["JSON", "XML"],
-    "Tools": ["GitHub", "Git"],
+    "Frontend": ["React", "TypeScript", "JavaScript"],
+    "UI & Styling": ["HTML", "CSS", "Tailwind CSS", "Bootstrap"],
+    "Backend & Data": ["PHP", "MySQL", "JSON"],
+    "Tools": ["Git", "GitHub", "Vite", "VS Code"],
   } as const,
   projects: [
     {
-      title: "Portfolio Website",
+      title: "Nexus Store",
       description:
-        "Modern, responsive portfolio with smooth sections, animations, and a clean design system.",
-      tags: ["React", "TypeScript", "Tailwind", "DaisyUI"],
-      liveUrl: "#",
-      codeUrl: "#",
-      highlights: ["Responsive layout", "Reusable components", "Clean UI"],
+        "Gaming ecommerce frontend with product pages, cart interactions, search, and responsive layouts.",
+      imageUrl: "/projects/nexus-store.png",
+      tags: ["React", "TypeScript", "Tailwind CSS", "React Router"],
+      liveUrl: "https://nexus-store-neon.vercel.app",
+      codeUrl: "https://github.com/webdev-ahad/nexus-store",
+      highlights: ["Dynamic product pages", "Cart functionality", "Responsive UI"],
     },
     {
-      title: "Landing Page / UI Kit",
+      title: "NeuralFlow",
       description:
-        "A component-driven UI with reusable cards, buttons, and layout primitives for fast shipping.",
-      tags: ["React", "Tailwind"],
-      liveUrl: "#",
-      codeUrl: "#",
-      highlights: ["Design system", "Consistent spacing", "Accessible components"],
+        "AI chatbot frontend with multi-conversation chat, persistent history, and polished interactions.",
+      imageUrl: "/projects/neuralflow.png",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Local Storage"],
+      liveUrl: "https://neuralflow-eight-khaki.vercel.app",
+      codeUrl: "https://github.com/webdev-ahad/neuralflow",
+      highlights: [
+        "Multi-conversation chat interface",
+        "Persistent chat history",
+        "Keyboard-friendly input",
+      ],
     },
     {
-      title: "Dashboard (Demo)",
+      title: "Lawyer Booking System",
       description:
-        "A dashboard-style app showcasing charts/cards patterns and thoughtful information hierarchy.",
-      tags: ["React", "TypeScript"],
-      liveUrl: "#",
-      codeUrl: "#",
-      highlights: ["Information architecture", "Reusable widgets", "Polished UI"],
+        "Responsive lawyer booking website with clean sections, smooth browsing, and a focused layout.",
+      imageUrl: "/projects/lawyer-website.png",
+      tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP"],
+      codeUrl: "https://github.com/webdev-ahad/lawyer-booking-system",
+      highlights: ["Clean layout", "Booking-focused flow", "Responsive sections"],
     },
   ] satisfies Project[],
   experience: [
@@ -105,11 +111,10 @@ export const portfolio = {
     },
   ] satisfies ExperienceItem[],
   featureIcons: [
-    { icon: Layout, title: "Clean UI", text: "Modern, consistent spacing and typography." },
-    { icon: Code2, title: "TypeScript", text: "Safer code with better structure." },
-    { icon: Sparkles, title: "UX First", text: "Responsive, accessible interactions." },
-    { icon: ArrowUpRight, title: "Fast Shipping", text: "Reusable components and patterns." },
-    { icon: FileDown, title: "Resume Ready", text: "Simple, recruiter-friendly sections." },
+    { icon: Layout, title: "Clean UI", text: "Sharp layouts and visual hierarchy." },
+    { icon: Code2, title: "Typed Code", text: "Structured, maintainable frontend." },
+    { icon: Sparkles, title: "UX Polish", text: "Smooth, responsive interactions." },
+    { icon: ArrowUpRight, title: "Fast Delivery", text: "Reusable components, shipped cleanly." },
   ],
 } as const;
 

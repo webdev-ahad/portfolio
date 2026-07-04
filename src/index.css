@@ -62,6 +62,19 @@ body {
   scroll-behavior: smooth;
 }
 
+.project-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgb(110 231 183);
+  outline-offset: 3px;
+}
+
 /* Light stagger when sections enter view; disabled when user prefers reduced motion */
 @keyframes fadeInUpSoft {
   from {

@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/25 to-transparent" />
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-3">
         <div>
-          <div className="text-sm font-semibold text-white">{portfolio.name}</div>
+          <div className="text-sm font-semibold text-white"> {portfolio.name}</div>
           <p className="mt-3 text-sm leading-relaxed text-slate-400">
             {portfolio.summary}
           </p>
