@@ -89,6 +89,22 @@ export const portfolio = {
       ],
     },
     {
+      title: "NeuroSpend",
+      description:
+        "Premium personal finance dashboard with analytics, budgeting tools, expense tracking, and multi-currency support inspired by modern fintech applications.",
+      imageUrl: "/projects/neurospend.png",
+      tags: ["React", "TypeScript", "Vite", "Recharts", "LocalStorage"],
+      liveUrl: "https://neurospend-two.vercel.app",
+      codeUrl: "https://github.com/webdev-ahad/neurospend",
+      highlights: [
+        "Interactive analytics dashboard",
+        "Multi-currency support",
+        "Light and dark themes",
+        "CSV export",
+        "Responsive fintech UI",
+      ],
+    },
+    {
       title: "Lawyer Booking System",
       description:
         "Responsive lawyer booking website with clean sections, smooth browsing, and a focused layout.",

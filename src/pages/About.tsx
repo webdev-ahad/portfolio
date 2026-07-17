@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Container } from "../components/Container";
-import { routes } from "../routes";
 import { SectionHeading } from "../components/SectionHeading";
-import useInView from "../hooks/useInView";
 import { portfolio } from "../data/portfolio";
+import useInView from "../hooks/useInView";
+import { routes } from "../routes";
 
 export default function About() {
   const [ref, isInView] = useInView<HTMLDivElement>({ threshold: 0.15, once: true });
@@ -15,10 +15,7 @@ export default function About() {
       </div>
 
       <Container className="relative">
-        <div
-          ref={ref}
-          className="grid items-start gap-12 md:grid-cols-2"
-        >
+        <div ref={ref} className="grid items-start gap-12 md:grid-cols-2">
           <div
             className={[
               "rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900/85 to-slate-950/50 p-7 shadow-lg shadow-black/15 transition duration-300 hover:border-white/15",
@@ -33,7 +30,7 @@ export default function About() {
 
             <div className="grid gap-3 text-sm leading-relaxed text-slate-300">
               <p>
-                I’m a frontend developer who enjoys turning ideas into fast, accessible, and
+                I'm a frontend developer who enjoys turning ideas into fast, accessible, and
                 beautiful web experiences. My main tools are React, TypeScript, Tailwind, and
                 modern component patterns.
               </p>

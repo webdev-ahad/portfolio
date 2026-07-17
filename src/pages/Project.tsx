@@ -40,7 +40,7 @@ export default function Project() {
           </div>
 
           <div
-            className="grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-2"
           >
             {portfolio.projects.map((p, i) => (
               <motion.article
@@ -54,11 +54,11 @@ export default function Project() {
                 <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/[0.04] blur-2xl transition duration-500 group-hover:bg-emerald-500/10" />
                 <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-emerald-500/10 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                 {p.imageUrl ? (
-                  <div className="relative flex aspect-[16/10] w-full items-center justify-center overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.08),rgba(2,6,23,0.92)_55%)] p-2.5">
+                  <div className="relative flex aspect-[1.9/1] w-full items-center justify-center overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.08),rgba(2,6,23,0.92)_55%)]">
                     <img
                       src={p.imageUrl}
                       alt={`${p.title} preview`}
-                      className="h-full w-full rounded-2xl object-cover object-top transition duration-500 group-hover:scale-[1.045]"
+                      className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
                       loading="lazy"
                       decoding="async"
                     />

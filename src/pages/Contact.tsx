@@ -17,7 +17,7 @@ export default function Contact() {
   const mailtoHref = useMemo(() => {
     const subject = encodeURIComponent(`Portfolio inquiry from ${name || "someone"}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}\n\n— Sent from portfolio`,
+      `Name: ${name}\nEmail: ${email}\n\n${message}\n\nSent from portfolio`,
     );
     return `mailto:${portfolio.email}?subject=${subject}&body=${body}`;
   }, [name, email, message]);
@@ -40,8 +40,8 @@ export default function Contact() {
           <div>
             <SectionHeading
               eyebrow="Contact"
-              title="Let’s build something great."
-              subtitle="This form opens your email app (mailto). If you don’t have an email app set up, use Copy Message and paste into Gmail/Outlook."
+              title="Let's build something great."
+              subtitle="This form opens your email app (mailto). If you do not have an email app set up, use Copy Message and paste into Gmail or Outlook."
             />
 
             <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-slate-900/85 to-slate-950/50 p-6 shadow-lg shadow-black/20">
@@ -108,7 +108,7 @@ export default function Contact() {
               window.open(mailtoHref, "_blank", "noopener,noreferrer");
               setNotice({
                 type: "success",
-                text: "Opened your email app. If nothing happened, use Copy Message and paste into Gmail/Outlook.",
+                text: "Opened your email app. If nothing happened, use Copy Message and paste into Gmail or Outlook.",
               });
             }}
           >
@@ -172,7 +172,7 @@ export default function Contact() {
                       await navigator.clipboard.writeText(text);
                       setNotice({
                         type: "success",
-                        text: "Message copied. Paste it into Gmail/Outlook.",
+                        text: "Message copied. Paste it into Gmail or Outlook.",
                       });
                     } catch {
                       setNotice({

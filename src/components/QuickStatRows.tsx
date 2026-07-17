@@ -3,9 +3,7 @@ import { StatValue } from "./StatValue";
 
 type QuickStatRowsProps = {
   className?: string;
-  /** Faster tick in hero (above the fold) vs deeper sections */
   variant?: "hero" | "section";
-  /** Tie counters to parent section visibility (e.g. Highlights block reveal). */
   statAnimationEnabled?: boolean;
 };
 
